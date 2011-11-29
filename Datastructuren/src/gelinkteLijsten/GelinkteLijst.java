@@ -1,6 +1,9 @@
 package gelinkteLijsten;
 
-public abstract class GelinkteLijst {
+public class GelinkteLijst {
+
+
+	
 	private Node first, last;
 	private int size;
 	
