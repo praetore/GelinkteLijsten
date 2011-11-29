@@ -1,5 +1,19 @@
 package gelinkteLijsten;
 
+
+/**
+ * De stapel, of eigenlijk 'Stack', is ook een 
+ * klassieke datastructuur.
+ * In [Hubbard, Hoofdstuk 5] wordt de Stack besproken. 
+ * In deze klasse implementeer je een Stack door alleen 
+ * maar gebruik te maken van de opslag methode die de 
+ * klasse GelinkteLijst je biedt.
+ * 
+ * Niet te veel spieken, daar leert u immer minder van.
+ *  
+ * @author youritjang
+ *
+ */
 public class Stapel extends GelinkteLijst {
 	/**
 	 * Zet een object boven op de stapel
@@ -8,7 +22,8 @@ public class Stapel extends GelinkteLijst {
 	void push(Object object){}
 	
 	/**
-	 * Haalt het bovenste object v an de stapel
+	 * Haalt het bovenste object van de stapel
+	 * LIFO: Last-in, First-out
 	 * @return het bovenste object
 	 */
 	Object pop(){return new Object();}

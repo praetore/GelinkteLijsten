@@ -5,8 +5,8 @@ public abstract class GelinkteLijst {
 	private int size;
 	
 	public GelinkteLijst(){
-		
 	}
+	
 	
 	Node getFirst(){
 		return first;
@@ -16,29 +16,65 @@ public abstract class GelinkteLijst {
 		return last;
 	}	
 	
-	void insertFirst(){}
+	/**
+	 * Voeg toe aan de voorkant
+	 */
+	void insertFirst(Object o){}
 
-	void insertLast(){}
+	/**
+	 * Voeg toe aan de achterkant
+	 */
+	void insertLast(Object o){}
 	
-	void insertBefore(){}
+	/**
+	 * Voeg toe voor een ander element
+	 */
+	void insertBefore(Object o, Object before){}
 	
-	void insertAfter(){}
+	/**
+	 * Voeg toe na een ander element
+	 */
+	void insertAfter(Object o, Object after){}
 
+	
+	/**
+	 * Verwijder een element
+	 * @param data
+	 */
 	void remove(Object data){}
 	
-	
+	/**
+	 * 
+	 * @param current
+	 * @return
+	 */
 	boolean isFirst(Node current){
 		return false; //dummy
 	}
 	
+	
+	/**
+	 * 
+	 * @param current
+	 * @return
+	 */
 	boolean isLast(Node current){
 		return false; //dummy	
 	}
 	
+	
+	/**
+	 * Het aantal elementen in de gelinkte lijst
+	 * @return
+	 */
 	int getSize(){
 		return size;
 	}
 	
+	/**
+	 * Set size
+	 * @return
+	 */
 	protected int setSize(){
 		return size;
 	}
