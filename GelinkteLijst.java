@@ -1,11 +1,23 @@
 package gelinkteLijsten;
 
 public class GelinkteLijst {
-
-
+	
+	
+	/**
+	 * Alleen de gelinkte lijst heeft toegang tot de node
+	 */
+	private class Node {
+		//Dit is de data die je opslaat
+		Object data;
+		
+		// referenties/pijlen naar de eerste en laatste nodes
+		Node next, previous;
+	}	
+	
 	
 	private Node first, last;
 	private int size;
+	
 	
 	public GelinkteLijst(){
 	}
@@ -14,6 +26,7 @@ public class GelinkteLijst {
 	Node getFirst(){
 		return first;
 	}
+	
 	
 	Node getLast(){
 		return last;
@@ -71,14 +84,6 @@ public class GelinkteLijst {
 	 * @return
 	 */
 	int getSize(){
-		return size;
-	}
-	
-	/**
-	 * Set size
-	 * @return
-	 */
-	protected int setSize(){
 		return size;
 	}
 }
