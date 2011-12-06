@@ -1,4 +1,4 @@
-package gelinkteLijsten;
+
 
 
 /**
@@ -13,29 +13,50 @@ package gelinkteLijsten;
  * klasse niet voor.
  */
 public class Stapel {
+	private GelinkteLijst list;
+	
+	public Stapel(){
+		list = new GelinkteLijst();
+	}
+	
 	/**
 	 * Zet een object boven op de stapel
 	 * @param object
 	 */
-	void push(Object object){}
+	void push(Object object){
+		list.insertFirst(object);		
+	}
+	
 	
 	/**
 	 * Haalt het bovenste object van de stapel
 	 * LIFO: Last-in, First-out
 	 * @return het bovenste object
 	 */
-	Object pop(){return new Object();}
+	Object pop(){
+		Object result = list.getFirst() ;
+		list.removeFirst();
+		return result;
+	}
 	
 	/**
 	 * Geeft het bovenste object terug, maar 
 	 * laat het op de stapel staan.
 	 * @return
 	 */
-	Object front(){return new Object();}
+	Object front(){
+		return list.getFirst();
+	}
 
 	/**
 	 * Geeft 'true' als er niks op de stapel ligt.
 	 * @return
 	 */
-	boolean isEmpty(){return false;}
+	boolean isEmpty(){
+		return list.getSize() == 0;
+	}
+	
+	public String toString(){
+		return list.toString();
+	}
 }

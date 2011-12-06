@@ -1,4 +1,3 @@
-package gelinkteLijsten;
 
 /**
  * In deze opdracht verken je het generieke karakter van de gelinkte datastructuur.
@@ -21,6 +20,38 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		//----------------------------------------
+		// Gelinkte lijst test
+		GelinkteLijst list = new GelinkteLijst();
+		
+		list.insertFirst("H");
+		list.insertFirst("o");
+		list.insertFirst("i");
+		
+		System.out.println(list);
+		
+		list.removeFirst();
+		System.out.println(list);
+
+		list.removeFirst();
+		System.out.println(list);
+		
+		list.removeFirst();
+
+		System.out.println(list);
+		
+		//----------------------------------------
+		// Stapel test
+		Stapel s = new Stapel();
+		s.push("D");
+		s.push("a");
+		s.push("g");
+		System.out.println(s);
+		
+		System.out.println(s.pop());
+		System.out.println(s.pop());
+		System.out.println(s.pop());
+		
 		
 	}
 

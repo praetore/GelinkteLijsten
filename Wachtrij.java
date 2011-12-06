@@ -1,4 +1,4 @@
-package gelinkteLijsten;
+
 
 /**
  * Een wachtrij (queue) werkt via het 
@@ -16,10 +16,10 @@ package gelinkteLijsten;
  */
 public class Wachtrij{
 	
-	GelinkteLijst lijst;
+	GelinkteLijst list;
 	
 	public Wachtrij(){
-		lijst = new GelinkteLijst();
+		list = new GelinkteLijst();
 		
 	}
 	
@@ -28,26 +28,33 @@ public class Wachtrij{
 	 * aan de achterkant: FIFO
 	 */
 	void enqueue(Object o){
-		lijst.insertFirst(o); //bijvoorbeeld zo	
+		list.insertFirst(o); //bijvoorbeeld zo	
 	}
 	
 	/**
 	 * Haal iets van de wachtrij
 	 * Aan de voorkant: FIFO
 	 */
-	void dequeue(){}
+	Object dequeue(){
+		Object result = list.getFirst();
+		list.removeFirst();		
+		return result;
+	}
+	
 	
 	/**
 	 * Het aantal elementen in de wachtrij
 	 * @return
 	 */
-	int size(){return 0;}
+	int size(){return list.getSize();}
 	
 	/**
 	 * Is de lijst leeg?
 	 * @return
 	 */
-	boolean isEmpty(){return false;}
+	boolean isEmpty(){
+		return list.getSize() == 0;
+	}
 	
 	/**
 	 * Bekijk het eerste element in de wachtrij, 
@@ -55,5 +62,11 @@ public class Wachtrij{
 	 * Note: het eerste element is als eerste toegevoegd.
 	 * @return
 	 */	
-	Object front(){return new Object();}
+	Object front(){
+		return list.getFirst();
+	}
+	
+	public String toString(){
+		return list.toString();
+	}
 }
